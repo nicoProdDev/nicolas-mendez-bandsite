@@ -1,83 +1,12 @@
 @use './partials/global' as *;
 
 //
-.oneRem__space{
-    padding-bottom: 1rem;
-}
-
-.twoRem__space{
-    padding-bottom: 2rem;
-}
-
-.threeRem__space{
-    padding-bottom: 3rem;
-}
-
-.fourRem__space{
-    padding-bottom: 4rem;
-}
 
 
 
 
-// <!-- navigation bar -->
-
-header, .navBar {
-    font-family: 'AvenirNextLTPro-Regular', sans-serif;
-}
-
-.navBar {
-    background-color: $BandSite-Black;
-    color: $BandSite-White;
-    padding-top: 1rem;
-    padding-bottom: 0;
-}
 
 
-.navBar__flex--anchor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; // Ensure the parent container takes full width
-}
-
-.webTitle {
-    font-size: 24px; 
-    line-height: 32px; 
-    font-weight: 700;   
-    padding-bottom: 1rem;
-}
-
-.navBar__flex--anchor li {
-    list-style: none;
-}
-
-.navBar__flex--anchor a {
-    text-decoration: none;
-    color: $BandSite-White;
-}
-
-.navBar__flex--BioShows {
-    display: flex;
-    flex-direction: row;
-    width: 100%; // Ensure the parent container takes full width
-    @include PageSection__bodyFooter--mobile;
-    align-self: stretch;
-    padding-top: 0rem;
-}
-
-.bioShows__flexGrow{
-    flex-grow: 1;
-    text-align: center; // Optional: Center the text inside each flex item
-    padding-bottom: 1rem; // Optional: Adds space between the text and the underline
-}
-
-.underlining {
-    font-family: 'AvenirNextLTPro-Bold', sans-serif;
-    border-bottom: 5px solid rgb(255, 255, 255); // Creates an underline
-    padding-bottom: 5px; // Optional: Adds space between the text and the underline
-}
 
 // <!-- bees background image -->
 
@@ -184,37 +113,6 @@ header, .navBar {
     margin-bottom: 1rem;
 }
 
-// <!-- Get in touch -->
-
-.getInTouch {
-    background-color: $BandSite-Black;
-    color: $BandSite-White;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: $bio__paddingLeft--mobile;
-    padding-right: $bio__paddingLeft--mobile;
-}
-
-.getInTouch__title {
-    @include PageSection__header--mobile;
-}
-
-
-.social-media-icons__individual {
-    padding-right: 2rem;
-}
-
-.footer__font {
-    @include PageSection__bodyFooter--mobile;
-}
-
-.getInTouch__mobile {
-    display: block;
-}
-
-.getInTouch__wide {
-    display: none;
-}
 
 
 
@@ -224,34 +122,7 @@ header, .navBar {
 
 @media (min-width: 768px) {
     
-    // <!-- navigation bar -->
-
-    .webTitle {
-        padding-top: 1rem;
-        padding-bottom: 2rem;
-    }
-
-    header, .navBar {
-        @include PageSection__bodyFooter--wide;
-    }
-
-    .navBar__flex--anchor {
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 33rem;
-        align-items: flex-start;
-        padding-left: $bio__paddingLeft--tablet;
-    }
-    .navBar__flex--anchor a {
-        margin-right: 3rem;
-    }
-    .navBar__flex--BioShows {
-        padding-top: 1rem;
-        width: auto;
-    }
-    .bioShows__flexGrow {
-        flex-grow: 0;
-    }
+    
     
     // <!-- bees background image -->
 
@@ -327,57 +198,7 @@ header, .navBar {
         margin-bottom: 0; // Remove margin-bottom to avoid extra space
     }
 
-    // <!-- Get in touch -->
 
-    .getInTouch__mobile {
-        display: none;
-    }
-
-    .getInTouch {
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-
-    .getInTouch__wide {
-        display: flex;
-        flex-direction: column;
-        padding-left: $bio__paddingLeft--tablet;
-        padding-right: $bio__paddingLeft--tablet;
-    }
-    .getInTouch__wideBar {
-        display: flex;
-        align-items: baseline;
-    }
-
-    .getInTouch__wideBar h1 {
-        @include Section__header--wide;
-    }
-
-    .social-media-icons {
-        flex-grow: 1;
-    }
-
-    .getInTouch__wideBar--elements {
-        padding-right: $footer__paddingRight;
-    }
-
-    #getInTouch__extra--pading {
-        padding-right: 3rem;
-    }
-        
-
-    .getInTouch__wide--mainInfo {
-        display: flex;
-        @include PageSection__bodyFooter--wide;
-    }
-
-    .getInTouch__wide--mainInfoColumns {
-        padding-right: $footer__paddingRight;
-    }
-
-    .copyright__footer {
-        @include PageSection__bodyFooter--wide;
-    }
 
 
 
@@ -386,19 +207,7 @@ header, .navBar {
 // Media queries for desktops (1280px or more)
 @media (min-width: 1280px) {
 
-    // <!-- navigation bar -->
 
-    .navBar__flex--anchor {
-        width: 30%;
-        padding-left: $bio__paddingLeft--wide;
-        // justify-content: space-evenly;
-    }
-    .hero__bio--title {
-        padding-left: $bio__paddingLeft--wide;
-    }
-    .hero__bio {
-        height: 60vh;
-    }
 
     // <!-- bees background image -->
 
@@ -415,12 +224,7 @@ header, .navBar {
         padding-right: $bio__paddingLeft--wide;
     }
 
-    // <!-- Get in touch -->
-
-    .getInTouch__wide {
-        padding-left: $bio__paddingLeft--wide;
-        padding-right: $bio__paddingLeft--wide;
-    }
+    
 }
 
 // v1

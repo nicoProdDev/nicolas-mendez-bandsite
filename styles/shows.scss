@@ -1,0 +1,10 @@
+@use './partials/global' as *;
+
+.show {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: $bio__paddingLeft--mobile;
+    padding-right: $bio__paddingLeft--mobile;
+    gap: 1rem;
+}
