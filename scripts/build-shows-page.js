@@ -22,7 +22,7 @@ const ShowsArrayObject = [
     {
         DATE : "Wed Dec 18 2024",
         VENUE : "Pres Club",
-        LOCATION : "San Francisco"
+        LOCATION : "San Francisco, CA"
     }
 ]
 
@@ -31,11 +31,11 @@ const ShowsArrayObject = [
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const showsSection = document.querySelector('.shows');
+    const showsSection = document.querySelector('.shows__list');
 
     ShowsArrayObject.forEach(show => {
         const showDiv = document.createElement('div');
-        showDiv.classList.add('show');
+        showDiv.classList.add('shows__list--elements');
 
         const dateParagraph = document.createElement('p');
         dateParagraph.className = 'date__shows';

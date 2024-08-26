@@ -1,10 +1,189 @@
 @use './partials/global' as *;
 
-.show {
-    display: flex;
-    flex-direction: column;
+
+
+.heroAlbum__section {
+    position: relative; /* Add this line */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: $bio__paddingLeft--mobile;
+    padding-right: $bio__paddingLeft--mobile;
+    background-image: url(../assets/Images/hero-shows.jpg); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+        z-index: 1;
+    }
+
+    h3, h1 {
+        position: relative;
+        z-index: 2;
+    }
+
+    h3 {
+        @include PageSection__subHeader--mobile;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        @include PageSection__header--mobile;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}.heroAlbum__section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: $bio__paddingLeft--mobile;
+    padding-right: $bio__paddingLeft--mobile;
+    background-image: url(../assets/Images/hero-shows.jpg); 
+    background-size: cover; /* Add this line */
+    background-position: center; /* Add this line */
+    background-color: rgba(0, 0, 0, 0.5); /* Add this line */
+    
+    color: white;
+
+    h3 {
+        @include PageSection__subHeader--mobile;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        @include PageSection__header--mobile;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.shows__list{
     padding-top: 2rem;
     padding-left: $bio__paddingLeft--mobile;
     padding-right: $bio__paddingLeft--mobile;
+    padding-bottom: 2rem;
+    
+    
+}
+
+.shows__list--header {
+    @include PageSection__header--mobile;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.shows__list--elements {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $BandSite-Mercury;
+
+    h1 {
+        @include PageSection__header--mobile;
+        font-weight: bold;
+    }
+
+    p:not(:nth-child(2)) {
+        @include PageSection__bodyFooter--mobile;
+        $BandSite-Black: #323232;
+    }
+
+    p:nth-child(2) {
+        @include PageSection__subHeader--mobile;
+    }
+}
+
+
+
+.date__shows, .venue__shows, .location__shows {
+    @include PageSection__subHeader--mobile;
+    color: $BandSite-MainSilver;
+}
+
+.button__buyTickets{
+    background-color: $BandSite-Black;
+    color: $BandSite-White;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    
+    
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+
+}
+
+@media (min-width: 768px) { 
+    
+
+    .heroAlbum__section {
+        padding-left: $bio__paddingLeft--tablet;
+        padding-right: $bio__paddingLeft--tablet;
+        height: 30rem;
+
+        h3 {
+            @include PageSection__subHeader--wide;
+            
+        }
+
+        h1 {
+            @include Section__header--wide;
+            font-size: 40px;
+            
+        }
+        
+    }
+
+    .heroAlbum__section > * {
+        max-width: 50%;
+    }
+
+    .shows__list {
+        padding-left: $bio__paddingLeft--tablet;
+        padding-right: $bio__paddingLeft--tablet;
+    }
+
+    .shows__list--elements {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        > * {
+            width: 30%;
+        }
+    }
+}
+
+@media (min-width: 1280px) { 
+    .heroAlbum__section {
+        padding-left: $bio__paddingLeft--wide;
+        padding-right: $bio__paddingLeft--wide;
+        display: flex;
+        align-items: center;
+        height: 40rem;
+    }
+
+    .shows__list {
+        padding-left: $bio__paddingLeft--wide;
+        padding-right: $bio__paddingLeft--wide;
+    }
 }

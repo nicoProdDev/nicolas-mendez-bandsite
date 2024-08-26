@@ -331,6 +331,170 @@ header, .navBar {
   margin-bottom: 1rem;
 }
 
+.comentSection {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.comentSection h2 {
+  font-family: "AvenirNextLTPro-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.image__profileComment {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: relative;
+  top: 9.5px;
+}
+
+.comentSection__flex {
+  display: flex;
+  align-items: stretch;
+  padding-bottom: 2.5rem;
+}
+
+.comentSection__flex > :nth-child(2) {
+  flex: 1;
+}
+
+.comentSection__imagecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.nameBox__comments {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+.nameBox__comments input {
+  padding: 0.5rem;
+}
+
+.nameBox__comments textarea {
+  padding-top: 0.5rem;
+  padding-left: 8px;
+  padding-bottom: 3rem;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+
+#submit__button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#commentsContainer {
+  font-family: "AvenirNextLTPro-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid #AFAFAF;
+}
+
+.image-container {
+  min-width: 75px;
+  min-height: 5px;
+  display: flex;
+}
+
+.bc-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #E1E1E1;
+}
+
+.name-comment-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-container {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.time-stamp-container {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #AFAFAF;
+}
+
+.comment-text {
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.complete-data {
+  flex-grow: 1;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+}
+
+input, textarea {
+  background-color: #faf9f9;
+  border: solid 1px #AFAFAF;
+  border-radius: 4px;
+}
+
 @media (min-width: 768px) {
   .hero__bio--title {
     padding-left: 2.25rem;
@@ -406,6 +570,10 @@ header, .navBar {
     margin-right: 0;
     margin-bottom: 0;
   }
+  .comentSection {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
 }
 @media (min-width: 1280px) {
   .aboutTheMusicians__title {
@@ -418,5 +586,9 @@ header, .navBar {
   .photoGallery {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+  .comentSection {
+    padding-left: 25rem;
+    padding-right: 25rem;
   }
 }/*# sourceMappingURL=bio.css.map */

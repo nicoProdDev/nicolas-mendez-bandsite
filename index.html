@@ -65,7 +65,7 @@
 
         </article>
         <!-- Photo Gallery -->
-        <section class="photoGallery twoRem__space">
+        <section class="photoGallery">
             <h1 class="photoGallery__title">Photo Gallery</h1>
             <ul class="photoGallery__flex">
                 <li><img src="./assets/Images/Photo-gallery-1.jpg" alt="Band Performing Live"></li>
@@ -81,29 +81,34 @@
         </section>
 
 
-        <!-- Comment Section -->
+        <!-- Coment Section -->
 
 
-        <section id="commentSection">
-            <h2>Leave a Comment</h2>
-            <form id='commentForm'>
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="comentSection">
+            <h2>Join The Conversation</h2>
+            <div class="comentSection__flex">
+                <div class="comentSection__imagecontainer">
+                    <img src="./assets/Images/Mohan-muruge.jpg" alt="profile pic" class="image__profileComment">
                 </div>
                 <div>
-                    <label for="comment">Comment:</label>
-                    <textarea id="comment" name="comment" required></textarea>
+                    <form id='commentForm'>
+                        <div class="nameBox__comments">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                        </div>
+                        <div class="nameBox__comments">
+                            <label for="comment">COMMENT</label>
+                            <textarea id="comment" name="comment" placeholder="Add a New Comment" required></textarea>
+                        </div>
+                        <button type="submit" id ="submit__button">COMMENT</button>
+                    </form>
                 </div>
-                <button type="submit" id ="submit__button">Post Comment</button>
-            </form>
+            </div>
             <div id="commentsContainer">
                 <h3>Comments:</h3>
                 <div id="commentsList"></div>
             </div>
-            <div id="commentsPrinted">
-
-            </div>
+            <div id="commentsPrinted"></div>
         </section>
 
 
