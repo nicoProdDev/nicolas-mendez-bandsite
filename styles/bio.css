@@ -571,8 +571,12 @@ input, textarea {
     margin-bottom: 0;
   }
   .comentSection {
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  #submit__button {
+    width: 33%;
+    margin-left: auto;
   }
 }
 @media (min-width: 1280px) {
@@ -588,7 +592,7 @@ input, textarea {
     padding-right: 6rem;
   }
   .comentSection {
-    padding-left: 25rem;
-    padding-right: 25rem;
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
 }/*# sourceMappingURL=bio.css.map */

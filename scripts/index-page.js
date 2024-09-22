@@ -1,21 +1,9 @@
-const comments = [
-    {
-        name: 'Victor Pinto',
-        timeStamp: '11/02/2023',
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    },
-    {
-        name: 'Christina Cabrera',
-        timeStamp: '10/28/2023',
-        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
-    },
-    {
-        name: 'Isaac Tadesse',
-        timeStamp: '10/20/2023',
-        comment: 'I can\'t stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can\'t get enough.'
-    }
-    
-];
+import { api } from './band-site-api.js';
+
+
+const comments = await api.getComments();
+
+console.log(comments);
 
 function createCommentSection(comment) {
     // Create the main card container
@@ -48,7 +36,26 @@ function createCommentSection(comment) {
     // Create and append the timestamp container
     const timeStampContainer = document.createElement('p');
     timeStampContainer.className = 'time-stamp-container';
-    timeStampContainer.innerText = comment.timeStamp;
+
+    function convertUnixTimeStampToDate(unixTimestamp) {
+        const date = new Date(unixTimestamp);
+
+        const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const day = daysOfWeek[date.getDay()];
+
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // Months are zero-based
+        const dayOfMonth = date.getDate();
+
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        const monthName = monthNames[date.getMonth()];
+
+        const formattedDate = `${month.toString().padStart(2, '0')}/${dayOfMonth.toString().padStart(2, '0')}/${year}`;
+        
+
+        return formattedDate;
+    }
+    timeStampContainer.innerText = convertUnixTimeStampToDate(comment.timestamp);
 
     nameCommentContainer.appendChild(nameContainer);
     nameCommentContainer.appendChild(timeStampContainer);
@@ -79,31 +86,43 @@ function renderComments() {
     }
 }
 
-function getCurrentDate() {
-    const date = new Date();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const year = date.getFullYear();
-    return `${month}/${day}/${year}`;
-}
+// function getCurrentDate() {
+//     const date = new Date();
+//     const month = date.getMonth() + 1;
+//     const day = date.getDate();
+//     const year = date.getFullYear();
+//     return `${month}/${day}/${year}`;
+// }
 
-function handleCommentSubmit(event) {
-    event.preventDefault(); // Prevent form submission
 
-    // Create a new comment object
+
+
+
+async function handleCommentSubmit(event) {
+    event.preventDefault();
+
     const cardData = {
         name: event.target.name.value,
-        timeStamp: getCurrentDate(),
-        comment: event.target.comment.value
+        comment: event.target.comment.value,
     };
-    comments.unshift(cardData); // Add new comment to the beginning of the array
-    renderComments(); // Re-render comments
 
-    event.target.reset(); // Reset the form
+    try {
+        const postedComment = await api.postComment(cardData);
+
+        comments.unshift(postedComment);
+        renderComments();
+        event.target.reset();
+        console.log(comments);
+    } catch (error) {
+        console.error('Error posting comment:', error);
+    }
 }
+
+
 
 // Add event listener to the form
 const commentsEl = document.querySelector('#commentForm');
 commentsEl.addEventListener('submit', handleCommentSubmit);
 
 renderComments(); // Initial render of comments
+

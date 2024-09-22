@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Site</title>
     <link rel="stylesheet" href="../styles/shows.css">
-    <script src="../scripts/build-shows-page.js" defer></script>
+    
+    
+    <script src="../scripts/build-shows-page.js" type="module"> </script>
 </head>
 <body>
     <header>
-        <!-- navigation bar -->
+  
         <nav class="navBar">
             <ul class="navBar__flex--anchor">
                 <li class="webTitle" ><a href="../index.html">BANDSITE</a></li>
@@ -20,9 +22,6 @@
             </ul>
         </nav>
     </header>
-    <main>
-
-        <!-- shows background image -->
 
         <section class="heroAlbum__section">
             <div>
@@ -38,10 +37,15 @@
              style="color: #cccccc; text-decoration: none;">Blur</a></div>
         </section>
 
-        <!-- shows -->
+
 
         <section class="shows__list">
             <h1 class = "shows__list--header">Shows</h1>
+            <div class="dataShows__wide">
+                <p>DATE</p>
+                <p>VENUE</p>
+                <p>LOCATION</p>
+            </div>
 
 
         </section>
@@ -49,7 +53,7 @@
 
         <footer class="getInTouch">
             <div class="getInTouch__mobile">
-                    <!-- Get in touch -->
+                   
                 <h1 class="getInTouch__title oneRem__space">Get in Touch</h1>
                 <div class="social-media-icons oneRem__space">
                     <a href="https://www.instagram.com"class="social-media-icons__individual"><img src="../assets/Icons/SVG/Icon-instagram.svg" alt="Instagram"></a>
@@ -94,10 +98,10 @@
                 </div>
             </div>
     
-            <!-- get in touch wide -->
+
     
             <div class="getInTouch__wide">
-                <!-- Get in touch -->
+              
             <div class="getInTouch__wideBar twoRem__space">
                 <h1 id="getInTouch__extra--pading">Get in Touch</h1>
                 <div class="social-media-icons getInTouch__wideBar--elements">
@@ -150,6 +154,9 @@
             </div>
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+         <!-- Your script file -->
+        <script src="scripts/band-site-api.js" type="module"></script>
 
 
     </main>

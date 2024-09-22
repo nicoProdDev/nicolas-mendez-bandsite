@@ -141,12 +141,12 @@
 
 .comentSection__flex {
     display: flex;
-    align-items: stretch; // Ensure children stretch to the height of the container
+    align-items: stretch; 
     padding-bottom: 2.5rem;
 }
 
 .comentSection__flex > :nth-child(2) {
-    flex: 1; // Make the middle element take up the remaining space
+    flex: 1; 
 }
 
 .comentSection__imagecontainer {
@@ -161,7 +161,7 @@
 .nameBox__comments {
     display: flex;
     flex-direction: column;
-    flex: 1; // Make the element stretch to fill the container
+    flex: 1; 
     padding-bottom: 1rem;
 }
 
@@ -182,7 +182,7 @@
 #commentForm {
     display: flex;
     flex-direction: column;
-    height: 100%; // Ensure the form takes the full height of its container
+    height: 100%; 
     @include PageSection__bodyFooter--mobile;
     font-weight: bold;
     color: $BandSite-MainSilver;
@@ -335,13 +335,13 @@ input, textarea {
     .photoGallery__flex {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem; // Adjust the gap between grid items as needed
+        gap: 1rem; 
     }
     .photoGallery__flex img {
         width: 100%;
         height: auto;
-        margin-right: 0; // Remove margin-right to avoid extra space
-        margin-bottom: 0; // Remove margin-bottom to avoid extra space
+        margin-right: 0; 
+        margin-bottom: 0; 
     }
 
     // Comment Section
@@ -349,8 +349,13 @@ input, textarea {
     //form
 
     .comentSection {
-        padding-left: 14rem;
-        padding-right: 14rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    #submit__button {
+        width: 33%;
+        margin-left: auto;
     }
 
 
@@ -381,8 +386,8 @@ input, textarea {
     // Comment Section
 
     .comentSection {
-        padding-left: 25rem;
-        padding-right: 25rem;
+        padding-left: 14rem;
+        padding-right: 14rem;
     }
 
     

@@ -132,6 +132,10 @@
 
 }
 
+.dataShows__wide{
+    display: none;
+}
+
 @media (min-width: 768px) { 
     
 
@@ -171,6 +175,24 @@
             width: 30%;
         }
     }
+
+    .date__shows, .venue__shows, .location__shows {
+        display: none;
+    }
+
+    .dataShows__wide{
+        display: flex;
+        @include PageSection__bodyFooter--wide;
+        color: $BandSite-MainSilver;
+        justify-content: space-between;
+        width: 75%;
+        gap: 1rem;
+    }
+
+    .dataShows__wide > * {
+        width: 33%;
+    }
+
 }
 
 @media (min-width: 1280px) { 
@@ -190,4 +212,5 @@
     }
 }
 
+// sprint
 

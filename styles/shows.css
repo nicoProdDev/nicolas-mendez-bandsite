@@ -361,6 +361,10 @@ header, .navBar {
   border-radius: 8px;
 }
 
+.dataShows__wide {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .heroAlbum__section {
     padding-left: 2.25rem;
@@ -394,6 +398,23 @@ header, .navBar {
   }
   .shows__list--elements > * {
     width: 30%;
+  }
+  .date__shows, .venue__shows, .location__shows {
+    display: none;
+  }
+  .dataShows__wide {
+    display: flex;
+    font-family: "AvenirNextLTPro-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #AFAFAF;
+    justify-content: space-between;
+    width: 75%;
+    gap: 1rem;
+  }
+  .dataShows__wide > * {
+    width: 33%;
   }
 }
 @media (min-width: 1280px) {

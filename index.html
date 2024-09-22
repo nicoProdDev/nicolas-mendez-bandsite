@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Site</title>
     <link rel="stylesheet" href="./styles/bio.css">
-    <script src="./scripts/index-page.js" defer> </script>
+    
+    
+    <script type="module" src="./scripts/index-page.js" defer></script>
+    
+    
 </head>
 <body>
     <header>
@@ -108,7 +112,9 @@
                 <h3>Comments:</h3>
                 <div id="commentsList"></div>
             </div>
-            <div id="commentsPrinted"></div>
+            <div id="commentsPrinted">
+                <!-- js comments container -->
+            </div>
         </section>
 
 
@@ -164,10 +170,10 @@
             </div>
         </div>
 
-        <!-- get in touch wide -->
+ 
 
         <div class="getInTouch__wide">
-            <!-- Get in touch -->
+           
         <div class="getInTouch__wideBar twoRem__space">
             <h1 id="getInTouch__extra--pading">Get in Touch</h1>
             <div class="social-media-icons getInTouch__wideBar--elements">
@@ -220,5 +226,8 @@
         </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Your script file -->
+    <script src="scripts/band-site-api.js" type="module"></script>
 </body>
 </html>
